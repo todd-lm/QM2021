@@ -1,4 +1,4 @@
-## QM 2021
+## QM 2020-2021
 ## NOTICE
 
 This repository contains the public FTC SDK for the SKYSTONE (2019-2020) competition season.  If you are looking for the current season's FTC SDK software, please visit the new and permanent home of the public FTC SDK:
