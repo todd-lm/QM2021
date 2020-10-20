@@ -48,13 +48,13 @@ public class HardwareSimpleBot {
     public DcMotor BR = null;
     public DcMotor BL = null;
 
-    DcMotor tape = null;
-    DcMotor intakeleft = null;
-    DcMotor intakeright = null;
-
-    Servo platformleft = null;
-    Servo platformright = null;
-    public Servo blockservo = null;
+//    DcMotor tape = null;
+//    DcMotor intakeleft = null;
+//    DcMotor intakeright = null;
+//
+//    Servo platformleft = null;
+//    Servo platformright = null;
+//    public Servo blockservo = null;
     Servo capservo = null;
 
 //    RevBlinkinLedDriver blinkinLedDriver ;
@@ -78,13 +78,13 @@ public class HardwareSimpleBot {
         FL = hwMap.get(DcMotor.class, "FL");
         BR  = hwMap.get(DcMotor.class, "BR");
         BL  = hwMap.get(DcMotor.class, "BL");
-        intakeright  = hwMap.get(DcMotor.class, "intakeright");
-        intakeleft  = hwMap.get(DcMotor.class, "intakeleft");
-        tape  = hwMap.get(DcMotor.class, "tape");
-        platformleft = hwMap.get(Servo.class, "platform left");
-        platformright = hwMap.get(Servo.class, "platform right");
-        capservo = hwMap.get(Servo.class, "capservo");
-        blockservo = hwMap.get(Servo.class, "blockservo");
+//        intakeright  = hwMap.get(DcMotor.class, "intakeright");
+//        intakeleft  = hwMap.get(DcMotor.class, "intakeleft");
+//        tape  = hwMap.get(DcMotor.class, "tape");
+//        platformleft = hwMap.get(Servo.class, "platform left");
+//        platformright = hwMap.get(Servo.class, "platform right");
+//        capservo = hwMap.get(Servo.class, "capservo");
+//        blockservo = hwMap.get(Servo.class, "blockservo");
 
       // blinkinLedDriver = hwMap.get(RevBlinkinLedDriver.class, "blinkin");
 
@@ -93,9 +93,9 @@ public class HardwareSimpleBot {
         FL.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
         BR.setDirection(DcMotor.Direction.REVERSE);
         BL.setDirection(DcMotor.Direction.FORWARD);
-        intakeright.setDirection(DcMotor.Direction.FORWARD);
-        intakeleft.setDirection(DcMotor.Direction.REVERSE);
-        tape.setDirection(DcMotor.Direction.FORWARD);
+//        intakeright.setDirection(DcMotor.Direction.FORWARD);
+//        intakeleft.setDirection(DcMotor.Direction.REVERSE);
+//        tape.setDirection(DcMotor.Direction.FORWARD);
 
 
         // Set rb to brake when power is zero
@@ -104,18 +104,18 @@ public class HardwareSimpleBot {
         FL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BR.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         BL.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        intakeright.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        intakeleft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        tape.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        intakeright.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        intakeleft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+//        tape.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         // Set all motors to zero power
         FR.setPower(0);
         FL.setPower(0);
         BR.setPower(0);
         BL.setPower(0);
-        intakeright.setPower(0);
-        intakeleft.setPower(0);
-        tape.setPower(0);
+//        intakeright.setPower(0);
+//        intakeleft.setPower(0);
+//        tape.setPower(0);
 
 
 
@@ -125,9 +125,9 @@ public class HardwareSimpleBot {
         FL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         BR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         BL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        intakeright.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        intakeleft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        tape.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        intakeright.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        intakeleft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+//        tape.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
 
@@ -196,51 +196,51 @@ public void drive(double speed) {
     }
 
     public void setPlatformUp(boolean isUp) {
-        if(isUp) {
-            platformleft.setPosition(simpleBotConstants.LEFT_PLATFORM_UP);
-            platformright.setPosition(simpleBotConstants.RIGHT_PLATFORM_UP);
-        } else {
-            platformleft.setPosition(simpleBotConstants.LEFT_PLATFORM_DOWN);
-            platformright.setPosition(simpleBotConstants.RIGHT_PLATFORM_DOWN);
-        }
+//        if(isUp) {
+//            platformleft.setPosition(simpleBotConstants.LEFT_PLATFORM_UP);
+//            platformright.setPosition(simpleBotConstants.RIGHT_PLATFORM_UP);
+//        } else {
+//            platformleft.setPosition(simpleBotConstants.LEFT_PLATFORM_DOWN);
+//            platformright.setPosition(simpleBotConstants.RIGHT_PLATFORM_DOWN);
+//        }
     }
 
     public void blockUp() {
 
-            blockservo.setPosition(simpleBotConstants.BLOCK_UP);
+//            blockservo.setPosition(simpleBotConstants.BLOCK_UP);
     }
     public void blockDown() {
-        blockservo.setPosition(simpleBotConstants.BLOCK_DOWN);
+//        blockservo.setPosition(simpleBotConstants.BLOCK_DOWN);
 
     }
 
 
     public void intakeIn() {
-        intakeleft.setPower(-simpleBotConstants.INTAKE_SPEED);
-        intakeright.setPower(-simpleBotConstants.INTAKE_SPEED );
+//        intakeleft.setPower(-simpleBotConstants.INTAKE_SPEED);
+//        intakeright.setPower(-simpleBotConstants.INTAKE_SPEED );
     }
     public void intakeIn(double speed) {
-        intakeleft.setPower(-speed);
-        intakeright.setPower(-speed);
+//        intakeleft.setPower(-speed);
+//        intakeright.setPower(-speed);
     }
 
     public void intakeOut(){
-        intakeleft.setPower(simpleBotConstants.OUTTAKE_SPEED);
-        intakeright.setPower(simpleBotConstants.OUTTAKE_SPEED);
+//        intakeleft.setPower(simpleBotConstants.OUTTAKE_SPEED);
+//        intakeright.setPower(simpleBotConstants.OUTTAKE_SPEED);
     }
     public void intakeStop(){
-        intakeleft.setPower(0);
-        intakeright.setPower(0);
+//        intakeleft.setPower(0);
+//        intakeright.setPower(0);
     }
-    public void tapeIn(){
-        tape.setPower(1);
-    }
-    public void tapeOut(){
-        tape.setPower(-1);
-    }
+//    public void tapeIn(){
+//        tape.setPower(1);
+//    }
+//    public void tapeOut(){
+//        tape.setPower(-1);
+//    }
 
     public void tapeStop(){
-        tape.setPower(0);
+//        tape.setPower(0);
 
     }
 
